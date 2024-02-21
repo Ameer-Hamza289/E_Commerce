@@ -6,16 +6,21 @@ const sendToken = require("../utils/sendToken");
 const sendEmail = require("../utils/sendMail");
 const crypto = require("crypto");
 const cloudinary = require("cloudinary");
+const fs = require('fs');
 
 // Register a User
 exports.registerUser = catchAsyncErrors(async (req, res, next) => {
-  console.log(req.files);
-  const myCloud = await cloudinary.v2.uploader.upload(req.files.avatar.tempFilePath, {
+  console.log(req.files.avatar);
+  const uploadedFile = req.files.avatar;
+  const tempFilePath = `uploads/${uploadedFile.name}`;
+  fs.writeFileSync(tempFilePath, uploadedFile.data);
+  const myCloud = await cloudinary.v2.uploader.upload(tempFilePath, {
     folder: "avatars",
     width: 150,
     crop: "scale",
   });
 
+  fs.unlinkSync(tempFilePath);
   const { name, email, password } = req.body;
 
   const user = await User.create({
