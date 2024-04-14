@@ -44,6 +44,9 @@ class ApiFeatures {
   
       return this;
     }
+    async exec() {
+      return await this.query();
+    }
   }
   
   module.exports = ApiFeatures;
