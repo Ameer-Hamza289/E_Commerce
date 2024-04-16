@@ -14,13 +14,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
 
 //Routes import
-const product=require('./Routes/productRoutes')
-const user=require("./routes/userRoutes")
-
-
+const product=require('./routes/productRoutes');
+const user=require("./routes/userRoutes");
+const order=require("./routes/orderRoutes");
+const payment=require("./routes/paymentRoutes");
 
 app.use('/api/v1',product);
 app.use('/api/v1',user);
+app.use('/api/v1',order);
+app.use("/api/v1", payment);
 
 
 app.use(express.static(path.join(__dirname, "../frontend/build")));
