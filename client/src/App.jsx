@@ -1,46 +1,46 @@
 import { Fragment, useState, useEffect } from "react";
 import "./App.css";
-import Header from "./component/layout/Header/Header";
+// import Header from "./components/layout/Header/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WebFont from "webfontloader";
-import Footer from "./component/layout/Footer/Footer";
-import Home from "./component/Home/Home";
-import ProductDetails from "./component/Product/ProductDetails";
-import Products from "./component/Product/Products";
-import Search from "./component/Product/Search";
-import LoginSignUp from "./component/User/LoginSignUp";
-import store from "./store";
+import {store} from "./store";
 import { loadUser } from "./actions/userAction";
-import UserOptions from "./component/layout/Header/UserOptions";
-import { useSelector } from "react-redux";
-import Profile from "./component/User/Profile";
-import ProtectedRoute from "./component/Routes/ProtectedRoute";
-import UpdateProfile from "./component/User/UpdateProfile";
-import UpdatedPassword from "./component/User/UpdatedPassword";
-import ForgotPassword from "./component/User/ForgotPassword";
-import ResetPassword from "./component/User/ResetPassword";
-import Cart from "./component/Cart/Cart";
-import Shipping from "./component/Cart/Shipping";
-import ConfirmOrder from "./component/Cart/ConfirmOrder";
-import Payment from "./component/Cart/Payment";
+import UserOptions from "./components/layout/Header/UserOptions";
 import axios from "axios";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import OrderSuccess from "./component/Cart/OrderSuccess";
-import MyOrders from "./component/Order/MyOrders";
-import OrderDetails from "./component/Order/OrderDetails";
-import Dashboard from "./component/Admin/Dashboard";
-import ProductList from "./component/Admin/ProductList";
-import NewProduct from "./component/Admin/NewProduct";
-import UpdateProduct from "./component/Admin/UpdateProduct";
-import OrderList from "./component/Admin/OrderList";
-import ProcessOrder from "./component/Admin/ProcessOrder";
-import UsersList from "./component/Admin/UsersList";
-import UpdateUser from "./component/Admin/UpdateUser";
-import ProductReviews from "./component/Admin/ProductReviews";
-import Contact from "./component/layout/Contact/Contact";
-import About from "./component/layout/About/About";
-import NotFound from "./component/layout/Not Found/NotFound";
+import { useSelector } from "react-redux";
+import Home from "./components/Home/Home";
+import ProductDetails from "./components/Products/ProductDetails/ProductDetails";
+import Products from "./components/Products/Products/Products";
+import Search from "./components/Products/Search/Search";
+import LoginSignUp from "./components/User/LoginSignUp/LoginSignUp";
+import Contact from "./components/layout/Contact/Contact";
+import NotFound from "./components/layout/Not Found/NotFound";
+import ForgotPassword from "./components/User/ForgotPassword/ForgotPassword";
+import ResetPassword from "./components/User/ResetPassword/ResetPassword";
+import ProtectedRoute from "./components/Routes/ProtectedRoute";
+import Profile from "./components/User/Profile/Profile";
+import UpdateProfile from "./components/User/UpdateProfile/UpdateProfile";
+import UpdatedPassword from "./components/User/UpdatePassword/UpdatePassword";
+import Shipping from "./components/Cart/Shipping/Shipping";
+import ConfirmOrder from "./components/Cart/ConfirmOrder/ConfirmOrder";
+import Payment from "./components/Cart/Payment/Payment";
+import MyOrders from "./components/Order/MyOrder/MyOrder";
+import OrderDetails from "./components/Order/OrderDetails/OrderDetails";
+import Dashboard from "./components/Admin/Dashboard/Dashboard";
+import ProductList from "./components/Admin/ProductsList/ProductList";
+import NewProduct from "./components/Admin/NewProduct/NewProduct";
+import UpdateProduct from "./components/Admin/UpdateProduct";
+import OrderList from "./components/Admin/OrderList";
+import ProcessOrder from "./components/Admin/ProcessOrder/ProcessOrder";
+import UsersList from "./components/Admin/UsersList";
+import UpdateUser from "./components/Admin/UpdateUser";
+import ProductReviews from "./components/Admin/ProductReview/ProductReviews";
+import OrderSuccess from "./components/Cart/OrderSuccess/OrderSuccess";
+import About from "./components/layout/About/About";
+import Footer from "./components/layout/Footer/Footer"
+import Cart from "./components/Cart/Cart/CArt";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -65,7 +65,7 @@ function App() {
    return (
     <div>
       <BrowserRouter>
-        <Header />
+        {/* <Header /> */}
         {isAuthenticated && <UserOptions user={user} />}
         <Fragment>
           <Elements stripe={loadStripe(stripeApiKey)}>

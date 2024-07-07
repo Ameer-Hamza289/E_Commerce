@@ -35,7 +35,7 @@ import {
   USER_DETAILS_SUCCESS,
   USER_DETAILS_FAIL,
   CLEAR_ERRORS,
-} from "../constants/userContstant";
+} from "../constants/userConstant";
 import axios from "axios";
 
 // Login

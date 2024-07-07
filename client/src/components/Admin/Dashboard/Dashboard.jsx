@@ -1,13 +1,13 @@
 import { useEffect } from "react";
-import Sidebar from "./Sidebar.js";
+import Sidebar from "../Sidebar/Sidebar.jsx";
 import "./Dashboard.css";
 import { Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { getAdminProduct } from "../../actions/productAction";
-import { getAllOrders } from "../../actions/orderAction.js";
-import { getAllUsers } from "../../actions/userAction.js";
-import MetaData from "../layout/MetaData";
+import { getAdminProduct } from "../../../actions/productAction.js";
+import { getAllOrders } from "../../../actions/orderAction.js";
+import { getAllUsers } from "../../../actions/userAction.js";
+import MetaData from "../../layout/MetaData.jsx";
 
 const Dashboard = () => {
   const dispatch = useDispatch();

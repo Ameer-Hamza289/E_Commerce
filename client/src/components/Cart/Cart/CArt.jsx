@@ -1,8 +1,8 @@
 import { Fragment } from "react";
 import "./Cart.css";
-import CartItemCard from "./CartItemCard";
+import CartItemCard from "../CartItemCard/CartItemCard";
 import { useSelector, useDispatch } from "react-redux";
-import { addItemsToCart, removeItemsFromCart } from "../../actions/cartAction";
+import { addItemsToCart, removeItemsFromCart } from "../../../actions/cartAction";
 import { Typography } from "@material-ui/core";
 import RemoveShoppingCartIcon from "@material-ui/icons/RemoveShoppingCart";
 import { Link, useNavigate } from "react-router-dom";

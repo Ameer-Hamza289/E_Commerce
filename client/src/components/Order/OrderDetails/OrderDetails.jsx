@@ -1,11 +1,11 @@
 import { Fragment, useEffect } from "react";
 import "./OrderDetails.css";
 import { useDispatch, useSelector } from "react-redux";
-import MetaData from "../layout/MetaData";
+import MetaData from "../../layout/MetaData";
 import { Link, useParams } from "react-router-dom";
 import { Typography } from "@material-ui/core";
-import { getOrderDetails, clearErrors } from "../../actions/orderAction";
-import Loader from "../layout/Loader/Loader";
+import { getOrderDetails, clearErrors } from "../../../actions/orderAction";
+import Loader from "../../layout/Loader/Loader";
 import { useAlert } from "react-alert";
 
 const OrderDetails = () => {

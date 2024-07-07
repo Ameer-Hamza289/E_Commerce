@@ -1,5 +1,5 @@
 import { useState, Fragment } from "react";
-import MetaData from "../layout/MetaData";
+import MetaData from "../../layout/MetaData";
 import "./Search.css";
 import { useNavigate } from "react-router-dom";
 

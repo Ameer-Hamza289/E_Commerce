@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div className="aboutSection">
       <div></div>
-      <div className="aboutSectionGradient"></div>
+      <div className="aboutSectionGradient"/>
       <div className="aboutSectionContainer">
         <Typography component="h1">About Us</Typography>
 
@@ -33,7 +33,7 @@ const About = () => {
             </a>
 
             <a
-              href="https://Wa.me/923217207623?text=Hi+there,+my+name+is"
+              href="https://Wa.me/923268842130?text=Hi+there,+my+name+is"
               target="blank"
             >
               <WhatsAppIcon className="whatsappSvgIcon" />

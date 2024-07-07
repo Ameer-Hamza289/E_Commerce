@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useRef } from "react";
-import CheckoutSteps from "./CheckOutSteps";
+import CheckoutSteps from "../CheckoutSteps/CheckoutSteps";
 import { useSelector, useDispatch } from "react-redux";
-import MetaData from "../layout/MetaData";
+import MetaData from "../../layout/MetaData";
 import { Typography } from "@material-ui/core";
 import { useAlert } from "react-alert";
 import {
@@ -17,7 +17,7 @@ import "./Payment.css";
 import CreditCardIcon from "@material-ui/icons/CreditCard";
 import EventIcon from "@material-ui/icons/Event";
 import VpnKeyIcon from "@material-ui/icons/VpnKey";
-import { createOrder, clearErrors } from "../../actions/orderAction";
+import { createOrder, clearErrors } from "../../../actions/orderAction";
 import { useNavigate } from "react-router-dom";
 
 const Payment = () => {

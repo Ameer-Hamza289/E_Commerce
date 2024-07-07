@@ -8,13 +8,13 @@ import {
   getProductDetails,
   clearErrors,
   newReview,
-} from "../../actions/productAction";
+} from "../../../actions/productAction";
 // import ReactStars from "react-rating-stars-component";
-import ReviewCard from "./ReviewCard";
-import Loader from "../layout/Loader/Loader";
+import ReviewCard from "../ReviewCard";
+import Loader from "../../layout/Loader/Loader";
 import { useAlert } from "react-alert";
-import MetaData from "../layout/MetaData";
-import { addItemsToCart } from "../../actions/cartAction";
+import MetaData from "../../layout/MetaData";
+import { addItemsToCart } from "../../../actions/cartAction";
 import {
   Dialog,
   DialogActions,
@@ -23,7 +23,7 @@ import {
   Button,
 } from "@material-ui/core";
 import { Rating } from "@material-ui/lab";
-import { NEW_REVIEW_RESET } from "../../constants/productConstant";
+import { NEW_REVIEW_RESET } from "../../../constants/productConstant";
 import { useParams } from "react-router-dom";
 
 const ProductDetails = () => {

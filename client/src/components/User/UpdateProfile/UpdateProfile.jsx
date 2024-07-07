@@ -1,13 +1,13 @@
 import { Fragment, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Loader from "../layout/Loader/Loader";
-import MetaData from "../layout/MetaData";
+import Loader from "../../layout/Loader/Loader";
+import MetaData from "../../layout/MetaData";
 import FaceIcon from "@mui/icons-material/Face";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { useAlert } from "react-alert";
-import { clearErrors, loadUser, updateProfile } from "../../actions/userAction";
+import { clearErrors, loadUser, updateProfile } from "../../../actions/userAction";
 import { useNavigate } from "react-router-dom";
-import { UPDATE_PROFILE_RESET } from "../../constants/userContstant";
+import { UPDATE_PROFILE_RESET } from "../../../constants/userConstant";
 import "./UpdateProfile.css";
 
 const UpdateProfile = () => {
