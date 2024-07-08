@@ -42,7 +42,7 @@ const UpdateUser = () => {
     } else {
       setName(user.name);
       setEmail(user.email);
-      setRole(user.role);
+      setRole(user.avatar.role);
     }
     if (error) {
       alert.error(error);
@@ -113,8 +113,8 @@ const UpdateUser = () => {
                 <VerifiedUserIcon />
                 <select value={role} onChange={(e) => setRole(e.target.value)}>
                   <option value="">Choose Role</option>
-                  <option value="Admin">Admin</option>
-                  <option value="User">User</option>
+                  <option value="admin">Admin</option>
+                  <option value="user">User</option>
                 </select>
               </div>
 

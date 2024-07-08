@@ -19,7 +19,6 @@ const UserOptions = ({ user }) => {
   const navigate = useNavigate();
   const alert = useAlert();
   const dispatch = useDispatch();
-
   const { cartItems } = useSelector((state) => state.cart);
 
   const options = [
@@ -38,7 +37,7 @@ const UserOptions = ({ user }) => {
     { icon: <ExitToAppIcon />, name: "Logout", func: logoutUser },
   ];
 
-  if (user.role === "Admin") {
+  if (user.avatar.role === "admin") {
     options.unshift({
       icon: <DashboardIcon />,
       name: "Dashboard",

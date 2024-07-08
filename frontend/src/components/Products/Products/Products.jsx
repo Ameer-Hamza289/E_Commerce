@@ -78,9 +78,10 @@ const Products = () => {
               products.map((product) => (
                 <ProductCard key={product._id} product={product} />
               ))}
+            {!products.length && <span className="no-product">No product found</span>}
           </div>
 
-          <div className="filterBox">
+          {!!products.length && <div className="filterBox">
             <Typography>Price</Typography>
             <Slider
               value={price}
@@ -114,7 +115,7 @@ const Products = () => {
                 max={5}
               />
             </fieldset>
-          </div>
+          </div>}
 
           {resultPerPage < productsCount && (
             <div className="paginationBox">
