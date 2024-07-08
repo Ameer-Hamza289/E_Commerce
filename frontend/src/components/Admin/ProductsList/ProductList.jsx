@@ -26,7 +26,7 @@ const ProductList = () => {
   const { error: deleteError, isDeleted } = useSelector(
     (state) => state.product
   );
-
+console.log(products);
   const deleteProductHandler = (id) => {
     dispatch(deleteProduct(id));
   };
@@ -109,7 +109,7 @@ const ProductList = () => {
     products.forEach((item) => {
       rows.push({
         id: item._id,
-        stock: item.stock,
+        stock: item.Stock,
         price: item.price,
         name: item.name,
       });

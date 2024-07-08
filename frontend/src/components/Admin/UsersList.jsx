@@ -92,13 +92,13 @@ const UsersList = () => {
               <EditIcon />
             </Link>
 
-            <Button
+            <span
               onClick={() =>
                 deleteUserHandler(params.getValue(params.id, "id"))
               }
             >
               <DeleteIcon />
-            </Button>
+            </span>
           </Fragment>
         );
       },
@@ -111,7 +111,7 @@ const UsersList = () => {
     users.forEach((item) => {
       rows.push({
         id: item._id,
-        role: item.role,
+        role: item.avatar.role,
         email: item.email,
         name: item.name,
       });

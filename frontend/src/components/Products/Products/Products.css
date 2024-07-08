@@ -8,6 +8,15 @@
   text-align: center;
 }
 
+.no-product{
+  margin: 2vmax auto;
+  width: 15vw;
+  padding: 2vmax;
+  color: rgba(0, 0, 0, 0.678);
+  font: 500 1.5vmax "Roboto";
+  text-align: center;
+}
+
 .products {
   display: flex;
   flex-wrap: wrap;
