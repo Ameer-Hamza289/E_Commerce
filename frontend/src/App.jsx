@@ -1,6 +1,6 @@
 import { Fragment, useState, useEffect } from "react";
 import "./App.css";
-// import Header from "./components/layout/Header/Header";
+import Header from "./components/layout/Header/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WebFont from "webfontloader";
 import {store} from "./store";
@@ -47,8 +47,9 @@ function App() {
   const [stripeApiKey, setStripeApiKey] = useState("");
   async function getStripeApiKey() {
     const { data } = await axios.get(`/api/v1/stripeapikey`);
-
-    setStripeApiKey(data.stripeApiKey);
+    if(data){
+      setStripeApiKey(data.stripeApiKey);
+    }
   }
 
   useEffect(() => {
@@ -60,12 +61,12 @@ function App() {
 
     store.dispatch(loadUser());
 
-    getStripeApiKey();
+    // getStripeApiKey();
   }, []);
    return (
     <div>
       <BrowserRouter>
-        {/* <Header /> */}
+        <Header />
         {isAuthenticated && <UserOptions user={user} />}
         <Fragment>
           <Elements stripe={loadStripe(stripeApiKey)}>
