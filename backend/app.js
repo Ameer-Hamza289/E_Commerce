@@ -22,6 +22,9 @@ const user=require("./routes/userRoutes");
 const order=require("./routes/orderRoutes");
 const payment=require("./routes/paymentRoutes");
 
+app.get("/",()=>{
+  res.send("Hello World!")
+})
 app.use('/api/v1',product);
 app.use('/api/v1',user);
 app.use('/api/v1',order);
